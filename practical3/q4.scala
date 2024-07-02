@@ -22,5 +22,5 @@ object q4 extends App {
     println(array.mkString(", "))
 
     var result = sum.Sum(num, array)
-    println(s"The sum of the numbers is: $result")
+    println(s"The sum of the even numbers is: $result")
 }
