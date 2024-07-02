@@ -2,7 +2,9 @@ object sum {
     def Sum(a: Int, arr: Array[Int]): Int = {
         var total = 0
         for (i <- 0 until a) {
-            total = total + arr(i)
+             if(arr(i) % 2 ==0){
+               total = total + arr(i)
+            }
         }
         return total
     }
