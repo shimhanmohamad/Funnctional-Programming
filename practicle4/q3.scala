@@ -18,13 +18,16 @@ object letter{
        var lastchar =  str.last.toUpper
        return firstchar + middle + lastchar
    }
-
+   def formatNames(name: String, functiontype: String => String): String = {
+        val str = functiontype(name)
+        return str
+   }
 }
 
 
 object q3 extends App{
-    println(letter.toUpper("benny"))
-    println(letter.firsttwo("niroshan"))
-    println(letter.toLower("Saman"))
-    println(letter.firstLast("kumar"))
+    println(letter.formatNames("Benny", letter.toUpper))
+    println(letter.formatNames("niroshan",letter.firsttwo))
+    println(letter.formatNames("Saman",letter.toLower))
+    println(letter.formatNames("kumar",letter.firstLast))
 }
