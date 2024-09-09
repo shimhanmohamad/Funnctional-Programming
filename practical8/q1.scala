@@ -51,8 +51,13 @@ object q1 extends App{
        val word = scala.io.StdIn.readLine().toLowerCase
        val decr = caesarCipher.decryption(word)
        println(decr)
+<<<<<<< HEAD
     }
     else{
         println("There is no option except 1 and 0")
     }  
 }
+=======
+    }  
+}
+>>>>>>> b8d118925cb45161fce506bea510243ad52b376f
