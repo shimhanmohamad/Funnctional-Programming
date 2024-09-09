@@ -2,9 +2,12 @@ object caesarCipher{
     def encryption(encString:String):String = {
         var encryptedString = ""
         for(i <- 0 until encString.length){
-            val char = encString(i)
+            var char = encString(i)
             if(char != ' '){
-               val position = encString(i).toInt + 1
+               var position = encString(i).toInt + 1
+               if(position > 'z'.toInt){
+                position = 'a'.toInt
+               }
                encryptedString += position.toChar
             }
             else{
@@ -19,7 +22,10 @@ object caesarCipher{
         for(i <- 0 until decString.length){
             var char = decString(i)
             if(char != ' '){
-               val position = decString(i).toInt - 1
+               var position = decString(i).toInt - 1
+               if(position < 'a'.toInt){
+                position = 'z'.toInt
+               }
                decryptedString += position.toChar
             }
             else{
@@ -40,12 +46,13 @@ object q1 extends App{
        val enc = caesarCipher.encryption(word)
        println(enc)
     }
-    else{
+    else if(option == 0){
        print("Enter the word you want to decrypt : ")
        val word = scala.io.StdIn.readLine().toLowerCase
        val decr = caesarCipher.decryption(word)
        println(decr)
     }
-    
-    
+    else{
+        println("There is no option except 1 and 0")
+    }  
 }

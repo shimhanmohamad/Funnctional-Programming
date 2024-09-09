@@ -1,0 +1,5 @@
+java.io.IOException: Error enabling ANSI output: GetConsoleMode error 6
+  coursier.jniutils.WindowsAnsiTerminal.enableAnsiOutput(WindowsAnsiTerminal.java:25)
+  scala.cli.ScalaCli$.main0(ScalaCli.scala:289)
+  scala.cli.ScalaCli$.main(ScalaCli.scala:118)
+  scala.cli.ScalaCli.main(ScalaCli.scala)
