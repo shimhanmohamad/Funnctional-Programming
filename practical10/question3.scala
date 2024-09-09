@@ -50,6 +50,7 @@ object MainApp {
     println(s"After transferring Rs.300 from account1 to account2:")
     println(s"Account1: ${acc1}")
     println(s"Account2: ${acc2}")
+    
   }
 }
 

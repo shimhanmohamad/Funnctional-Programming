@@ -17,4 +17,5 @@ class Rational(n:Int, d:Int) {
     def -(r:Rational) = this.add(r.neg)
 
     override def toString(): String = numer + "/" + denom
+    
 }

@@ -54,6 +54,7 @@ class Bank(accounts: List[Account]) {
   }
 }
 
+
 object MainApp {
   def main(args: Array[String]): Unit = {
     val acc1 = new Account(1000.00)
